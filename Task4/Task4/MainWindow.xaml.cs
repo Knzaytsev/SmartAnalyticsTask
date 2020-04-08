@@ -31,7 +31,7 @@ namespace Task4
         private void selectYear_Click(object sender, RoutedEventArgs e)
         {
             int year = (int)listYears.SelectedItem;
-            dgSales.ItemsSource = reader.ReadCountries(year);
+            dgSales.ItemsSource = reader.ReadCountriesByYear(year);
         }
     }
 }

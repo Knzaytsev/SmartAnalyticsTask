@@ -10,6 +10,6 @@ namespace Task4
     {
         List<int> ReadYear();
 
-        List<Country> ReadCountries(int year);
+        List<Country> ReadCountriesByYear(int year);
     }
 }

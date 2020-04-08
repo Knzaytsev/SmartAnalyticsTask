@@ -18,7 +18,7 @@ namespace Task4
             this.connectionString = connectionString;
         }
 
-        public List<Country> ReadCountries(int year)
+        public List<Country> ReadCountriesByYear(int year)
         {
             var countries = new List<Country>();
             using (var reader = new StreamReader(connectionString))

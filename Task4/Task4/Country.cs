@@ -9,7 +9,6 @@ namespace Task4
     class Country
     {
         public string Name { get; set; }
-        //public decimal SumSales { get; set; }
         public int CountOrders { get; set; }
     }
 }

@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Task4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="412.4" Width="421.6">
     <Grid>
-        <ComboBox Name="listYears" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="selectYear" Content="Выбрать" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="75" Click="selectYear_Click"/>
-        <DataGrid x:Name="dgSales" HorizontalAlignment="Left" Height="363" Margin="151,47,0,0" VerticalAlignment="Top" Width="633">
+        <ComboBox Name="listYears" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="selectYear" Content="Выбрать" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="75" Click="selectYear_Click"/>
+        <DataGrid x:Name="dgSales" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="363" Margin="151,10,0,0" VerticalAlignment="Top" Width="246" ColumnWidth="*">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="Name" Header="Страна"/>
-                <DataGridTextColumn x:Name="CountOrders" Header="Количество заказов"/>
+                <DataGridTextColumn x:Name="Name" Header="Страна" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn x:Name="CountOrders" Header="Количество заказов" Binding="{Binding Path=CountOrders}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="Год:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
