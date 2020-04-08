@@ -30,6 +30,8 @@ namespace Task4
 
         private void selectYear_Click(object sender, RoutedEventArgs e)
         {
+            if (listYears.SelectedItem is null)
+                return;
             int year = (int)listYears.SelectedItem;
             dgSales.ItemsSource = reader.ReadCountriesByYear(year);
         }
