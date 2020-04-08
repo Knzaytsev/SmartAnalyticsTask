@@ -46,7 +46,8 @@ namespace Task4
                             Name = g.Key,
                             CountOrders = g.Sum(x => x.CountOrders)
                         };
-            return query.ToList();
+
+            return query.OrderByDescending(x => x.CountOrders).Take(10).ToList();
         }
 
         public List<int> ReadYear()
