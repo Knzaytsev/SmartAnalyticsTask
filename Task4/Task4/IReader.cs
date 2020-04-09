@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    interface IReader
+    public interface IReader
     {
         List<int> ReadYear();
 

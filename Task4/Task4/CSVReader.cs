@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    class CSVReader : IReader
+    public class CSVReader : IReader
     {
         private string connectionString = @"..\..\data\SalesData.csv";
 
@@ -63,7 +63,7 @@ namespace Task4
                     years.Add(int.Parse(year));
                 }
             }
-            return years.Distinct().ToList();
+            return years.Distinct().OrderByDescending(x => x).ToList();
         }
     }
 }

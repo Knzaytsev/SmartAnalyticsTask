@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4
 {
-    class Country
+    public class Country
     {
         public string Name { get; set; }
         public int CountOrders { get; set; }
